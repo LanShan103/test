@@ -30,8 +30,8 @@ values, indices = similarity[0].topk(3)
 
 print("\nTop predictions:\n")
 for value, index in zip(values, indices):
-```print(f"{a_list[index]:>16s}: { 100*value.item():.2f}%")
-    
+print(f"{a_list[index]:>16s}: { 100*value.item():.2f}%")
+```
 # 最后输出结果为
 ![image](https://user-images.githubusercontent.com/128159015/227699120-03a3adda-a936-4995-b643-2f4fc45f384e.png)
 
@@ -63,10 +63,12 @@ values, indices = similarity[0].topk(4)
 
 print("\nTop predictions:\n")
 for value, index in zip(values, indices):
-```print(f"{a_list[index]:>16s}: { 100*value.item():.2f}%")
-    
+   print(f"{a_list[index]:>16s}: { 100*value.item():.2f}%")
+```
 最后输出结果为
+
 ![image](https://user-images.githubusercontent.com/128159015/227699269-ca745e89-cdb1-4257-bde2-90cd1afd1c9e.png)
+
 出现了一边倒相信'Red envelop'的情况
 # 总结
 当类别为'red','China','envelop'时经预测图片最为符合'China'，但当类别为'red','China','envelop','Red envelop'时'Red envelop'对该图片的描述更为一致，出现了一边倒的情况。所以当类别描述最为接近图片时出现的概率可能是最大的。
